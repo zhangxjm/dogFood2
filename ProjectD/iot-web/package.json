@@ -1,0 +1,31 @@
+{
+  "name": "iot-management-web",
+  "version": "1.0.0",
+  "description": "物联网设备管理系统前端",
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "vue": "^2.6.14",
+    "vue-router": "^3.5.3",
+    "axios": "^0.27.2",
+    "echarts": "^5.3.3",
+    "element-ui": "^2.15.9",
+    "dayjs": "^1.11.5"
+  },
+  "devDependencies": {
+    "@vue/cli-service": "^4.5.19",
+    "@vue/cli-plugin-babel": "^4.5.19",
+    "@vue/cli-plugin-router": "^4.5.19",
+    "vue-template-compiler": "^2.6.14",
+    "sass": "^1.54.9",
+    "sass-loader": "^10.2.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

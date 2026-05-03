@@ -1,0 +1,42 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: iot-management
+  
+  datasource:
+    url: jdbc:postgresql://localhost:5432/iot_db
+    username: postgres
+    password: 123456
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+      idle-timeout: 300000
+      connection-timeout: 30000
+  
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQL10Dialect
+
+mqtt:
+  broker: tcp://localhost:1883
+  username: admin
+  password: public
+  client-id: iot-server
+  keep-alive-interval: 60
+  clean-session: true
+  connection-timeout: 30
+
+logging:
+  level:
+    com.iot: debug
+    org.springframework.web: info
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
